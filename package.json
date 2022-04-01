@@ -1,0 +1,43 @@
+{
+    "name": "rowtine",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@use-gesture/react": "^10.2.4",
+        "autoprefixer": "^10.4.2",
+        "chroma-js": "^2.3.0",
+        "classnames": "^2.3.1",
+        "lodash": "^4.17.21",
+        "react": "^17.0.2",
+        "react-device-detect": "^2.1.2",
+        "react-dom": "^17.0.2",
+        "react-inlinesvg": "^2.3.0",
+        "react-responsive": "^9.0.0-beta.6",
+        "react-scripts": "5.0.0",
+        "react-spring": "^9.4.2",
+        "sass": "^1.49.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "deploy": "react-scripts build && netlify deploy --dir=build --prod",
+        "serve": "react-scripts build && serve -s build -p 5000"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

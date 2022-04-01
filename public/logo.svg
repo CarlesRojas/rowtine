@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+            }
+
+            .cls-2 {
+                opacity: 0.9;
+                fill: url(#linear-gradient);
+            }
+        </style>
+        <linearGradient id="linear-gradient" x1="12.31" y1="256" x2="499.69" y2="256" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#f90" />
+            <stop offset="1" stop-color="#ffd100" />
+        </linearGradient>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Logo">
+            <g id="logo-2" data-name="logo">
+                <path id="Logo-3" data-name="Logo" class="cls-2"
+                    d="M477.83,34.17c-22-22-51.77-27.5-71.48-16-56.07,32.67-172.53-50.52-305.63,82.58S50.81,350.28,18.14,406.35c-11.47,19.71-6,49.5,16,71.48s51.77,27.5,71.48,16c56.07-32.66,172.53,50.53,305.63-82.57s49.91-249.56,82.58-305.63C505.33,85.94,499.82,56.15,477.83,34.17ZM230.75,349.73a25.57,25.57,0,0,1-25.56,25.56H188.7a25.57,25.57,0,0,1-25.57-25.56V162.27a25.57,25.57,0,0,1,25.57-25.56h16.49a25.57,25.57,0,0,1,25.56,25.56Zm118.12,0a25.57,25.57,0,0,1-25.57,25.56H306.81a25.57,25.57,0,0,1-25.56-25.56V162.27a25.57,25.57,0,0,1,25.56-25.56H323.3a25.57,25.57,0,0,1,25.57,25.56Z" />
+            </g>
+        </g>
+    </g>
+</svg>
