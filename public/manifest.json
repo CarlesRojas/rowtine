@@ -1,8 +1,8 @@
 {
     "short_name": "Rowtine",
     "name": "Rowtine",
-    "description": "Keep track of your fasting schedule in a healthy way.",
-    "categories": ["education", "medical", "health"],
+    "description": "Keep track of my rowing routine.",
+    "categories": ["education", "fitness", "health", "lifestyle"],
     "lang": "en-US",
     "icons": [
         {
@@ -31,22 +31,6 @@
             "type": "image/png",
             "sizes": "512x512",
             "purpose": "any maskable"
-        }
-    ],
-    "screenshots": [
-        {
-            "src": ".webp",
-            "sizes": "720x1280",
-            "type": "image/webp",
-            "platform": "narrow",
-            "label": ""
-        },
-        {
-            "src": ".webp",
-            "sizes": "1280x720",
-            "type": "image/webp",
-            "platform": "wide",
-            "label": ""
         }
     ],
     "orientation": "any",
