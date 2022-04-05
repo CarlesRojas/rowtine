@@ -33,9 +33,9 @@
             "purpose": "any maskable"
         }
     ],
-    "orientation": "any",
+    "orientation": "portrait",
     "start_url": ".",
     "display": "fullscreen",
-    "theme_color": "#000000",
-    "background_color": "#000000"
+    "theme_color": "#e6e6e6",
+    "background_color": "#e6e6e6"
 }
