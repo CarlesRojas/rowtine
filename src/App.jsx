@@ -137,27 +137,35 @@ export default function App() {
 
     const changeDayValue = (year, month, day, newValue) => {
         setChangeData({ year, month, day, newValue });
-
-        if (newValue) setPopup({ text: `Did you row on ${MONTHS[month]} ${day} ?`, button1: "Yes", button2: "No" });
-        else setPopup({ text: `Remove row entry for ${MONTHS[month]} ${day} ?`, button1: "Yes", button2: "No" });
-
+        setPopup({ text: `Did you row on ${MONTHS[month]} ${day} ?`, button1: "Yes", button2: "No" });
         setPopupActive(true);
     };
 
     const onButton1 = async () => {
         const { year, month, day, newValue } = changeData;
-        const result = await setRowEntry(newValue, year, month, day);
 
+        if (!newValue) return setPopupActive(false);
+
+        const result = await setRowEntry(newValue, year, month, day);
         if ("error" in result) setError(result.error);
         else {
             rowHistoric.current[year][month + 1][day - 1] = newValue;
             forceUpdate();
         }
-
         setPopupActive(false);
     };
 
-    const onButton2 = () => {
+    const onButton2 = async () => {
+        const { year, month, day, newValue } = changeData;
+
+        if (newValue) return setPopupActive(false);
+
+        const result = await setRowEntry(newValue, year, month, day);
+        if ("error" in result) setError(result.error);
+        else {
+            rowHistoric.current[year][month + 1][day - 1] = newValue;
+            forceUpdate();
+        }
         setPopupActive(false);
     };
 
