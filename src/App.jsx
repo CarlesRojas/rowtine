@@ -53,6 +53,15 @@ export default function App() {
 
     const [changeData, setChangeData] = useState({ year: -1, month: -1, day: -1, newValue: false });
     const [popup, setPopup] = useState({ text: "-", button1: "-", button2: "-" });
+    const [popupActive, setPopupActive] = useAutoResetState(false, 3000);
+
+    useEffect(() => {
+        if (!popupActive)
+            setTimeout(() => {
+                setChangeData({ year: -1, month: -1, day: -1, newValue: false });
+                setPopup({ text: "-", button1: "-", button2: "-" });
+            }, 200);
+    }, [popupActive]);
 
     // #################################################
     //   LOAD DATA
@@ -131,6 +140,8 @@ export default function App() {
 
         if (newValue) setPopup({ text: `Did you row on ${MONTHS[month]} ${day} ?`, button1: "Yes", button2: "No" });
         else setPopup({ text: `Remove row entry for ${MONTHS[month]} ${day} ?`, button1: "Yes", button2: "No" });
+
+        setPopupActive(true);
     };
 
     const onButton1 = async () => {
@@ -143,11 +154,11 @@ export default function App() {
             forceUpdate();
         }
 
-        setChangeData({ year: -1, month: -1, day: -1, newValue: false });
+        setPopupActive(false);
     };
 
     const onButton2 = () => {
-        setChangeData({ year: -1, month: -1, day: -1, newValue: false });
+        setPopupActive(false);
     };
 
     // #################################################
@@ -238,7 +249,7 @@ export default function App() {
                 </div>
             </div>
 
-            <div className={cn("popup", { active: changeData.year > 0 && popup.text !== "-" })}>
+            <div className={cn("popup", { active: popupActive })}>
                 <p>{popup.text}</p>
                 <div className="buttons">
                     <div className="button" onClick={onButton2}>
