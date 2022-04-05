@@ -251,8 +251,8 @@ export default function App() {
             </div>
 
             <div className="row">
-                <div className="circle">
-                    <SVG className={cn("logo", { rowedToday })} src={LogoIcon} onClick={setRowToday}></SVG>
+                <div className={cn("circle", { rowedToday })} onClick={setRowToday}>
+                    <SVG className="logo" src={LogoIcon}></SVG>
                 </div>
                 <div className={cn("error", { active: errorStyleActive })}>{error || "-"}</div>
             </div>

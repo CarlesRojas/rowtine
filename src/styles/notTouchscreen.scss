@@ -3,4 +3,45 @@
 @import "./animations";
 
 .isNotTouchscreen {
+    .App {
+        .historic {
+            .monthSelector {
+                .icon {
+                    &:hover {
+                        color: rgba(0, 0, 0, 0.6);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .calendar {
+                .day {
+                    &:hover {
+                        box-shadow: 0.2rem 0.2rem 0.4rem $shadow, -0.2rem -0.2rem 0.4rem $light;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .popup {
+            .buttons {
+                .button {
+                    &:hover {
+                        box-shadow: 0.4rem 0.4rem 0.5rem $shadow, -0.4rem -0.4rem 0.5rem $light;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .row {
+            .circle {
+                &:hover {
+                    box-shadow: 0.4rem 0.4rem 0.5rem $shadow, -0.4rem -0.4rem 0.5rem $light;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
